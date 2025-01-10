@@ -1,14 +1,35 @@
-import React from 'react'
+import React, { ReactNode } from "react";
 
-const MagicButton = () => {
+const MagicButton = ({
+  position,
+  otherClasses,
+  icon,
+  title,
+  handleClick,
+}: {
+  position: string;
+  otherClasses?: string;
+  icon: ReactNode;
+  title: string;
+  handleClick?: () => void;
+}) => {
   return (
-    <button className="p-[3px] relative">
-  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-    Lit up borders
-  </div>
-</button>   
-  )
-}
+    <button 
+    
+    className=
+    "relative inline-flex h-12 overflow-hidden rounded-lg p-[1px]  focus:outline-none md:w-60 md:mt-10">
+      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+      <span className={
+        `inline-flex h-full w-full cursor-pointer items-center justify-center
+         rounded-lg hover:bg-transparent bg-slate-950 px-3 py-1 text-sm font-medium
+          text-white backdrop-blur-3xl ${otherClasses}`
+          }>
+            {position === "left" && icon}
+        {title}
+            {position === "right" && icon}
+      </span>
+    </button>
+  );
+};
 
-export default MagicButton
+export default MagicButton;
