@@ -6,14 +6,15 @@ const Grid = () => {
     <section id="about">
         <BentoGrid>
             {
-            gridItems.map((item)=>(
-                <BentoGridItem 
-                key={item.id}
-                id={item.id} 
-                title={item.title}
-                 description={item.description}
-                 className={item.className}
-
+              
+            gridItems.map((item)=>(                                                          
+                <BentoGridItem                         
+                key={item.id}                                 
+                id={item.id}                      
+                title={item.title}                               
+                 description={item.description}                     
+                 className={item.className}              
+                             
                  />
             ))
             
