@@ -57,6 +57,8 @@ export const BentoGridItem = ({
     navigator.clipboard.writeText("shayankhanyousufzai@gmail.com");
     setCopied(true)
   }
+  const leftLists = ["ReactJS", "GSAP", "Typescript"];
+  const rightLists = ["PHP", "NextJS", "WordPress"];
 
   return (
     <div
@@ -117,32 +119,37 @@ export const BentoGridItem = ({
 
         { id === 2 && <GridGlobe />}
 
-        {id === 3 && (
-          <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 lg-gap-8 ">
-              {['React.Js','Next.Js','TypeScript',].map((item) => (
-               <span key={item}
-   className="py-2 lg:py-3 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
-                {item}
-               </span>
-              ))}
-              <span className="py-3 px-3 rounded-lg text-center bg-[#10132E]"/>
+       
+
+{id === 3 && (
+            <div className="flex gap-4 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+              {/* tech stack lists */}
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-2">
+                {leftLists.map((item, i) => (
+                  <span
+                    key={i}
+                    className="lg:py-2 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
               </div>
-
-
-              <div className="flex flex-col gap-3 lg-gap-8 ">
-              <span className="py-3 px-3 rounded-lg text-center bg-[#10132E]"/>
-              {[,'PHP','MySql','GSAP'].map((item) => (
-               <span key={item}
-   className="py-2 lg:py-3 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
-                {item}
-               </span>
-              ))}
-              
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-2">
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                {rightLists.map((item, i) => (
+                  <span
+                    key={i}
+                    className="lg:py-2 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
-
-          </div>
-        )}
+            </div>
+          )}
 
         {id === 6 && (
           <div className="mt-5 relative ">
@@ -160,7 +167,7 @@ export const BentoGridItem = ({
         <MagicButton 
         title={copied ? 'Email Copied' : 'Copy My Email'}
         icon={<IoCopyOutline />}
-        position="left"
+        position="left" 
         otherClasses="!bg-[#161a31] gap-2"
         handleClick={handleCopyEmail} 
         />
