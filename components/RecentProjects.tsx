@@ -6,26 +6,26 @@ import { FaLocationArrow } from 'react-icons/fa'
 
 const RecentProjects = () => {
   return (
-    <div className='py-20'>
+    <div className='py-20' id='projects'>
         <h1 className="heading">
             A Small Section Of {''}
             <span className='text-purple'> Recent Projects</span>
 
         </h1>
-        <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+        <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
             {projects.map(({id,
 title,
 des,
 img,
 iconLists,
 link})=>(
-                <div key={id} className="lg:min-h-[32.5rem] h-[25rem] flex justify-center items-center sm:w-96 w-[80vw]">
-                    <PinContainer title={title} href={link}>
-                        <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                <div key={id} className="lg:min-h-[32.5rem] sm:h-[41rem] h-[32rem] flex justify-center items-center sm:w-[530px] w-[80vw]">
+                    <PinContainer title={link} href={link}>
+                        <div className="relative flex items-center justify-center sm:w-[530px] w-[80vw] overflow-hidden h-[30vh] sm:h-[40vh]  mb-10">
                             <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
                                 <img src="/bg.png" alt="bg-img" />
                             </div>
-                            <img src={img} alt={title} className='z-10 absolute bottom-0' />
+                            <img src={img} alt={title} className='z-10 absolute bottom-0    ' />
                         </div>
                         <h1 className="font-bold lg:text-3xl md:xl text-base line-clamp-1">
                                     {title}

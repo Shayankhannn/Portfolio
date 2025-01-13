@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
+
 export const FloatingNav = ({
   navItems,
   className,
@@ -90,7 +91,7 @@ export const FloatingNav = ({
           <span>Login</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
         </button> */}
-            
+
       </motion.div>
     </AnimatePresence>
   );
