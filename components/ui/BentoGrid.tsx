@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
+// import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
 
 import Lottie from "react-lottie";
 import { useState } from "react";
@@ -98,11 +98,11 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        { id === 6 && (
+        {/* { id === 6 && (
           <BackgroundGradientAnimation>
             <div className="absolute  z-50 text-center flex items-center justify-center text-white font-bold   " ></div>
           </BackgroundGradientAnimation>
-        )}
+        )} */}
         <div
           className={cn(  
             titleClassName,
