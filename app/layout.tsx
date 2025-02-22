@@ -1,9 +1,8 @@
-"use client";
 
 import type { Metadata } from "next";
 
 import "./globals.css";
-import { ThemeProvider } from "./Provider";
+// import { ThemeProvider } from "./Provider";
 
 
 
@@ -22,14 +21,14 @@ export default function RootLayout({
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-        >
+        > */}
           {children}
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );
