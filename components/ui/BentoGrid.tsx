@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
-import { GridGlobe } from "./GridGlobe";
+
 import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from '@/data/confetti.json'
@@ -117,7 +117,7 @@ export const BentoGridItem = ({
           {title}
         </div>
 
-        { id === 2 && <GridGlobe />}
+        
 
        
 
